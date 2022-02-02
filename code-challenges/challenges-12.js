@@ -15,7 +15,14 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
+exercise12
+        // write your code here
+        let newArr = [];
+        newArr = arr.filter(odd => odd%2)
+        console.log(newArr)
+
     // write your code here
+ main
 }
 
 // 2) ---------------------
@@ -66,7 +73,25 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
+exercise12
+        // write your code here
+        let newArr = [];
+        newArr = arr.filter(x => (x.yearsOfExperience >4) && (x.tech == 'JS'))
+        newArr.map( x =>{
+          full = x.firstName + ' ' + x.LastName;
+          const obj = x;
+          const startAdded = {'fullName':full , ...obj};
+          delete startAdded.firstName;
+          delete startAdded.LastName;
+          delete startAdded.yearsOfExperience;
+          console.log(startAdded)
+          newArr = [];
+          newArr.push(startAdded)
+        })
+        console.log(newArr)
+
     // write your code here
+ main
 }
 
 // 3) ---------------------
