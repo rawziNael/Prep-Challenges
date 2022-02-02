@@ -14,12 +14,24 @@
 // 
 // ------------------------
 
+ exercise13
     const oddFiltration = (arr) => {
+=======
+const oddFiltration = (arr) => {
+exercise12
+main
         // write your code here
         let newArr = [];
         newArr = arr.filter(odd => odd%2)
         console.log(newArr)
+ exercise13
     }
+
+
+    // write your code here
+ main
+}
+ main
 
 // 2) ---------------------
 // 
@@ -69,6 +81,10 @@
 // ------------------------
 
 const cvsFiltration = (arr) => {
+exercise13
+
+exercise12
+main
         // write your code here
         let newArr = [];
         newArr = arr.filter(x => (x.yearsOfExperience >4) && (x.tech == 'JS'))
@@ -84,6 +100,12 @@ const cvsFiltration = (arr) => {
           newArr.push(startAdded)
         })
         console.log(newArr)
+ exercise13
+
+
+    // write your code here
+ main
+ main
 }
 
 // 3) ---------------------
