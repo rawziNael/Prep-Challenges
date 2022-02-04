@@ -62,7 +62,7 @@ const stringReverse = (str) => {
     const words = str.split(' ');
     const revWords = words.reduce((reversed, character) => {
         return character + ' ' + reversed
-    }, '')
+    },)
     return revWords;
 }
 
