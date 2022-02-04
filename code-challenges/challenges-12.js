@@ -14,24 +14,13 @@
 // 
 // ------------------------
 
- exercise13
     const oddFiltration = (arr) => {
-=======
-const oddFiltration = (arr) => {
-exercise12
-main
         // write your code here
         let newArr = [];
         newArr = arr.filter(odd => odd%2)
-        console.log(newArr)
- exercise13
-    }
-
-
-    // write your code here
- main
+        return newArr
 }
- main
+
 
 // 2) ---------------------
 // 
@@ -81,15 +70,12 @@ main
 // ------------------------
 
 const cvsFiltration = (arr) => {
-exercise13
 
-exercise12
-main
         // write your code here
         let newArr = [];
         newArr = arr.filter(x => (x.yearsOfExperience >4) && (x.tech == 'JS'))
         newArr.map( x =>{
-          full = x.firstName + ' ' + x.LastName;
+          let full = x.firstName + ' ' + x.LastName;
           const obj = x;
           const startAdded = {'fullName':full , ...obj};
           delete startAdded.firstName;
@@ -99,13 +85,7 @@ main
           newArr = [];
           newArr.push(startAdded)
         })
-        console.log(newArr)
- exercise13
-
-
-    // write your code here
- main
- main
+        return newArr;
 }
 
 // 3) ---------------------
@@ -119,6 +99,11 @@ main
 
 const vowelsFiltration = (arr) => {
     // write your code here
+    let newArr = arr.filter( x => (x.includes('a')) ||  x.includes('e')||  x.includes('i')||  x.includes('o')||  x.includes('u'))
+    const a = arr;
+    const b = newArr;
+    const c = a.filter(az => !b.includes(az));
+    return c;
 } 
 
 // 4) ---------------------
@@ -136,7 +121,11 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
+    let newArr = [];
+    newArr = arr1.filter(az => !arr2.includes(az))
+    let newArr2 = arr2.filter(az => !arr1.includes(az))
+    let newArr3 = newArr.concat(newArr2)
+    return newArr3;
 }
 
 
