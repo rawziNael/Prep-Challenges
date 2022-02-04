@@ -16,7 +16,7 @@
 // -------------
 function square(arr){
     const newArr = arr.map(x => x ** 2);
-  console.log(newArr)
+  return newArr;
 }
 
 
@@ -59,14 +59,14 @@ function fullName(arr) {
         // write your code here
         const newArr =[];
         arr.map(x => {
-          full = x.firstName+' '+x.lastName;
+          let full = x.firstName + ' ' +x.lastName;
           x.fullName =full;
           delete x.firstName;
           delete x.lastName;
           newArr.push(Object.values(x).join())
           
         })
-        console.log(newArr)
+        return newArr;
 }
 
 // 3) ---------------------
@@ -143,7 +143,7 @@ function gradesAvg(arr) {
           x.avg = avg;
           newArr.push(x)
         })
-        console.log(newArr)
+        return newArr;
 }
 
 
@@ -215,7 +215,7 @@ function gradesAvg(arr) {
 
 function studentsResult(arr) {
         // write your code here
-        newArr = [];
+        let newArr = [];
         arr.map(x=>{
           let avg = 1;
           let sum = 0;
@@ -233,7 +233,7 @@ function studentsResult(arr) {
           x.result = result
           newArr.push(x)
         })
-        console.log(newArr);
+        return newArr;
 }
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
