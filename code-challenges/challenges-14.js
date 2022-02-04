@@ -19,8 +19,8 @@
 // ------------------------
 
 const LastWord = (str) => {
-    let last = str.slice(str.lastIndexOf(' ') + 1);
-    return console.log(last);
+  let last = str.slice(str.lastIndexOf(' ') + 1);
+  return last;
 }
 
 // 2) ---------------------
@@ -32,8 +32,8 @@ const LastWord = (str) => {
 // ------------------------
 
 const LastWord_2 = (str) => {
-    let last = str.slice(str.lastIndexOf(' ') + 1);
-    return console.log(last);
+  let last = str.slice(str.lastIndexOf(' ') + 1);
+  return last;
 }
 
 
@@ -50,16 +50,15 @@ const LastWord_2 = (str) => {
 // ------------------------
 
 const replaceWords = (str) => {
-    // write your code here
-    newStr = str.split(' ')
-    if (newStr.includes('I')) {
-        newStr.splice(newStr.indexOf('I'), 1, 'We');
-    } if (newStr.includes('was')) {
-        newStr.splice(newStr.indexOf('was'), 1, 'were');
-    } if (newStr.includes('am')) {
-        newStr.splice(newStr.indexOf('am'), 1, 'are');
-    }
-    return (newStr.join(' '));
+  let newStr = str.split(' ')
+  if (newStr.includes('I')) {
+    newStr.splice(newStr.indexOf('I'), 1, 'We');
+  } if (newStr.includes('was')) {
+    newStr.splice(newStr.indexOf('was'), 1, 'were');
+  } if (newStr.includes('am')) {
+    newStr.splice(newStr.indexOf('am'), 1, 'are');
+  }
+  return newStr.join(' ');
 }
 
 // 4) ---------------------
@@ -68,12 +67,16 @@ const replaceWords = (str) => {
 // ["move","it","away","from","the","street"] ==> "move it away from the, street" 
 //
 // ------------------------
-
 const arrToStr = (arr) => {
-    // write your code here
-    newArr = arr.splice(5, 0, ',')
-    new2 = arr.join(' ')
-    return new2
+
+  // write your code here
+
+  let newArr = arr.splice(5, 0, ',')
+  let toComma = arr.slice(0, 5).join(' ')
+  let afterComma = arr.slice(5,).join(' ')
+  let result = toComma.concat(afterComma)
+
+  return result
 }
 
 // 5) ---------------------
@@ -88,15 +91,17 @@ const arrToStr = (arr) => {
 //
 // ------------------------
 
+
 const letterCounter = (str) => {
-        let obj ={};
-        newStr = str.replace(/[^a-zA-Z]+/g, '').split('')
-        newStr.map((x) => {
-          obj[x] = (obj[x] || 0) + 1;
-        })
-        result = Object.entries(obj).join(' ').split(' ').join(' ').replaceAll(',', '').replaceAll(' ','');
-    
-        return (result)
+  // write your code here
+  let obj = {};
+  let newStr = str.replace(/[^a-zA-Z]+/g, '').split('')
+  newStr.map((x) => {
+    obj[x] = (obj[x] || 0) + 1;
+
+  })
+  let result = Object.entries(obj).join(' ').split(' ').join(' ').replaceAll(',', '').replaceAll('1 ', '1').replaceAll('2 ', '2');
+  return result
 }
 
 
