@@ -14,12 +14,13 @@
 // 
 // ------------------------
 
-const oddFiltration = (arr) => {
+    const oddFiltration = (arr) => {
         // write your code here
         let newArr = [];
         newArr = arr.filter(odd => odd%2)
         return newArr
 }
+
 
 // 2) ---------------------
 // 
@@ -69,6 +70,7 @@ const oddFiltration = (arr) => {
 // ------------------------
 
 const cvsFiltration = (arr) => {
+
         // write your code here
         let newArr = [];
         newArr = arr.filter(x => (x.yearsOfExperience >4) && (x.tech == 'JS'))
