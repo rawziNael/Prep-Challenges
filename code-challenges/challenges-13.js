@@ -42,7 +42,7 @@ const objectCounter = (obj) => {
         counter++;
         return counter;
     }, 0);
-    console.log(sum);
+    return sum;
 }
 
 // 2) ---------------------
@@ -63,7 +63,7 @@ const stringReverse = (str) => {
     const revWords = words.reduce((reversed, character) => {
         return character + ' ' + reversed
     }, '')
-    return console.log(revWords);
+    return revWords;
 }
 
 
