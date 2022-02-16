@@ -15,7 +15,19 @@
 //
 
 const recursionPattern = (int1, int2) => {
-    // write your code here
+    let arr = [];
+    if(int1 < int2){
+        arr.push(-4);
+        arr.push(int1);
+        arr.unshift(int1);
+        return arr;
+    }else{
+        let ar = recursionPattern(int1 - int2, int2);
+        let secArr = ar.flat(Infinity);
+        secArr.push(int1);
+        secArr.unshift(int1);
+        return secArr;
+    }
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -33,15 +45,9 @@ const recursionPattern = (int1, int2) => {
 //  Assume that links end with .com, .org or .net
 
 const filterLinks = (str) => {
-    var doc = document.createElement("html");
-    doc.innerHTML = str;
-    var links = doc.getElementsByTagName("a")
-    var urls = [];
-
-    for (var i=0; i<links.length; i++) {
-    urls.push(links[i].getAttribute("href"));
-    }
-    return urls.join().slice(7);
+    let arr =str.split("/");
+    let link =arr[2].split('"');
+    return link[0];
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -131,3 +137,4 @@ module.exports = { recursionPattern, filterLinks, isPalindrome, samePattern };
 //     return 0;
 // }
 // pattern(16)
+
